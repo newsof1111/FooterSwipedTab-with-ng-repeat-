@@ -1,0 +1,47 @@
+<style>
+	.slider-slide-tab span:last-child {
+		border-radius: 10px;
+		background: #ef473a;
+		padding: 3px 8px;
+		color: white;
+		position: relative;
+		bottom: 8px;
+		left: 5px;
+		font-weight: bold;
+		box-shadow: 0 0 1px #333;
+	}
+	
+	.scrollmenu.scroll-view.scroll-x {
+		overflow-x: hidden;
+		/* default value is 'scroll' */
+	}
+</style>
+
+<ion-view view-title="Product list" style="margin-top: 80px;">
+
+	<ion-pane  style="top:0px;">
+
+		<ion-slide-box slide-tabs-scrollable="true" show-pager="false" on-slide-changed="changeSlide(index)" bounce="false" ion-slide-tabs>
+			<ion-slide ng-repeat="(key, catg) in catgs" ion-slide-tab-label="{{catg.name}}" style="background-color:white;">
+				<ion-content class="slider-content" >
+
+					<ion-list ng-if="ready[key]">
+						<ion-item class="item-avatar item-icon-right" ng-repeat="element in catg.items" type="item-text-wrap">
+							<img ng-src="{{element.img}}">
+							<h2 style="color: #ef473a;">{{element.name}}</h2>
+							<p>{{element.status}}</p>
+							<i class="icon ion-chevron-right icon-accessory"></i>
+						</ion-item>
+					</ion-list>
+
+					<center ng-if="!ready[key]">
+						<br>	
+						<ion-spinner></ion-spinner>
+					</center>
+
+					<br></br><br></br><br></br>
+				</ion-content>
+			</ion-slide>
+		</ion-slide-box>
+	</ion-pane>
+</ion-view>

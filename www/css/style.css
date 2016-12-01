@@ -1,0 +1,43 @@
+
+.platform-ios.has-translucent-status-bar .app-header-bar {
+    padding-top: 20px;
+}
+
+.platform-android.has-translucent-status-bar .app-header-bar  {
+    padding-top: 25px;
+}
+
+
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('raidercrusader.ttf') format('truetype');
+}
+
+.item-complex .item-content, .item-radio .item-content{
+background-color: #383838;
+color: blanchedalmond;
+}
+.item{
+border: none;
+}
+.bar.bar-dark .title {
+    color: #5a5a5a;
+    margin-top:17px;
+    font-family:myFirstFont;
+    font-size:20px;
+}
+
+.bar.bar-dark .back-button  {
+    color: #5a5a5a;
+    position:relative;
+    top:15px;
+}
+.bar.bar-dark  {
+   background: none;
+   border:none !important;
+    background: #e2e2e2; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #eaeaea 0%, #e2e2e2 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #eaeaea 0%,#e2e2e2 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #eaeaea 0%,#e2e2e2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
